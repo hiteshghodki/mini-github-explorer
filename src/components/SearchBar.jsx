@@ -8,19 +8,9 @@ export default function SearchBar({ onSearch, loading }) {
     e.preventDefault();
     const trimmed = username.trim();
     if (!trimmed) return;
-    localStorage?.setItem("searchTerm",trimmed)
     onSearch(trimmed);
   };
 
-
-  useEffect(()=>{
- const searchTerm = localStorage?.getItem("searchTerm")
- if(searchTerm){
-  setUsername(searchTerm)
-  onSearch(searchTerm)
- }
-
-  }, [])
   return (
     <form
       onSubmit={handleSubmit}
