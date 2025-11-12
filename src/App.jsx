@@ -71,10 +71,6 @@ export default function App() {
           <ProfileCard />
           <RepoSection loading={loading} />
         </main>
-
-        <footer className="text-center mt-12 text-gray-500 text-sm">
-          Built with ❤️ using React + GitHub API
-        </footer>
       </div>
     </UserProvider>
   );
